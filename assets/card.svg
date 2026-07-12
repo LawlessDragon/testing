@@ -1,0 +1,100 @@
+<svg width="700" height="798" viewBox="0 0 700 798" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="photoClip">
+      <rect x="22" y="22" width="186" height="186" rx="16"/>
+    </clipPath>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#1B1035"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00B8FF"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="6" y="6" width="688" height="786" rx="22" fill="url(#bgGrad)" stroke="#00B8FF" stroke-width="2" filter="url(#cardShadow)"/>
+
+  <rect x="22" y="22" width="186" height="186" rx="16" fill="#0B1220" stroke="#00B8FF" stroke-width="2"/>
+  <g clip-path="url(#photoClip)">
+    <image href="character.gif" x="22" y="22" width="186" height="186" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+
+  <rect x="536" y="24" width="130" height="26" rx="13" fill="none" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="601" y="41" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#A78BFA" text-anchor="middle">SEM 6 &#183; IE STUDENT</text>
+
+  <path d="M254,38 L257,44 L263,45 L258,49 L260,55 L254,52 L248,55 L250,49 L245,45 L251,44 Z" fill="#00E5FF"/>
+  <path d="M204,30 L206,34 L210,35 L207,38 L208,42 L204,40 L200,42 L201,38 L198,35 L202,34 Z" fill="#7C3AED"/>
+
+  <text x="232" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF">Lawless</text>
+  <text x="232" y="91" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#00B8FF" letter-spacing="0.5">INDUSTRIAL ENGINEER / IOT TINKERER / ANDROID DEV</text>
+  <path d="M232,99 Q 260,93 288,99 T 344,99 T 400,99 T 456,99 T 512,99" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+
+  <text x="232" y="126" font-family="Arial, sans-serif" font-size="13" fill="#9CA3AF">
+    <tspan x="232" dy="0">Blue dragon furry building IoT gadgets and Android apps.</tspan>
+    <tspan x="232" dy="18">Railfan of KAI Daop 1 Jakarta / Railfurs community.</tspan>
+  </text>
+
+  <line x1="22" y1="222" x2="678" y2="222" stroke="#00B8FF" stroke-opacity="0.25"/>
+
+  <text x="22" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00B8FF" letter-spacing="1">ABOUT ME</text>
+  <rect x="22" y="274" width="285" height="26" rx="13" fill="#00B8FF"/>
+  <text x="164" y="291" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Role: Industrial Engineering Student</text>
+  <rect x="315" y="274" width="256" height="26" rx="13" fill="#7C3AED"/>
+  <text x="443" y="291" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Ex Job: LG Electronics Indonesia</text>
+  <rect x="22" y="308" width="168" height="26" rx="13" fill="#06B6D4"/>
+  <text x="106" y="325" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">IP: 2 HKI Registered</text>
+  <rect x="198" y="308" width="183" height="26" rx="13" fill="#A78BFA"/>
+  <text x="289" y="325" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Tinkering: ESP32 / IoT</text>
+  <rect x="389" y="308" width="212" height="26" rx="13" fill="#0EA5E9"/>
+  <text x="494" y="325" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Building: Kotlin + Compose</text>
+  <rect x="22" y="342" width="219" height="26" rx="13" fill="#2DD4BF"/>
+  <text x="132" y="359" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Identity: Blue Dragon Furry</text>
+  <rect x="249" y="342" width="226" height="26" rx="13" fill="#3A86FF"/>
+  <text x="362" y="359" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Also: Railfan / Photographer</text>
+  <text x="22" y="392" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00B8FF" letter-spacing="1">TECH STACK</text>
+  <rect x="22" y="406" width="66" height="26" rx="13" fill="#7F52FF"/>
+  <text x="55" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Kotlin</text>
+  <rect x="96" y="406" width="51" height="26" rx="13" fill="#ED8B00"/>
+  <text x="121" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Java</text>
+  <rect x="155" y="406" width="44" height="26" rx="13" fill="#00599C"/>
+  <text x="177" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">C++</text>
+  <rect x="207" y="406" width="73" height="26" rx="13" fill="#3DDC84"/>
+  <text x="243" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Android</text>
+  <rect x="288" y="406" width="132" height="26" rx="13" fill="#4285F4"/>
+  <text x="354" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Jetpack Compose</text>
+  <rect x="428" y="406" width="80" height="26" rx="13" fill="#DDA92E"/>
+  <text x="468" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Firebase</text>
+  <rect x="516" y="406" width="73" height="26" rx="13" fill="#00979D"/>
+  <text x="552" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Arduino</text>
+  <rect x="597" y="406" width="58" height="26" rx="13" fill="#00B8FF"/>
+  <text x="626" y="423" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">ESP32</text>
+  <rect x="22" y="440" width="44" height="26" rx="13" fill="#00B8FF"/>
+  <text x="44" y="457" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Git</text>
+  <text x="22" y="490" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00B8FF" letter-spacing="1">BUILDING</text>
+  <rect x="22" y="504" width="226" height="26" rx="13" fill="#00B8FF"/>
+  <text x="135" y="521" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Aniflow -- Android Anime App</text>
+  <rect x="256" y="504" width="256" height="26" rx="13" fill="#7C3AED"/>
+  <text x="384" y="521" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Smart-Incubator -- IoT Fail-Safe</text>
+  <rect x="22" y="538" width="234" height="26" rx="13" fill="#06B6D4"/>
+  <text x="139" y="555" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0B1220" text-anchor="middle">Railfurs -- Community Website</text>
+
+  <line x1="22" y1="572" x2="678" y2="572" stroke="#00B8FF" stroke-opacity="0.25"/>
+
+  <image href="https://github-readme-stats.vercel.app/api?username=LawlessDragon&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;count_private=true" x="22" y="582" width="322" height="140"/>
+  <image href="https://github-readme-streak-stats.herokuapp.com/?user=LawlessDragon&amp;theme=tokyonight&amp;hide_border=true" x="356" y="582" width="322" height="140"/>
+
+  <line x1="22" y1="724" x2="678" y2="724" stroke="#00B8FF" stroke-opacity="0.25"/>
+
+  <rect x="22" y="738" width="190" height="34" rx="17" fill="url(#btnGrad)"/>
+  <text x="117" y="760" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0B1220" text-anchor="middle">github.com/LawlessDragon</text>
+
+  <rect x="224" y="738" width="90" height="34" rx="17" fill="none" stroke="#E4405F" stroke-width="1.5"/>
+  <text x="269" y="760" font-family="Arial, sans-serif" font-size="12" fill="#E4405F" text-anchor="middle">Instagram</text>
+
+  <rect x="326" y="738" width="110" height="34" rx="17" fill="none" stroke="#2DD4BF" stroke-width="1.5"/>
+  <text x="381" y="760" font-family="Arial, sans-serif" font-size="12" fill="#2DD4BF" text-anchor="middle">Railfurs.my.id</text>
+</svg>
