@@ -1,1 +1,66 @@
-# testing
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:e94560&height=200&section=header&text=Hi%20There,%20I'm%20Lawless%20👋&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Industrial%20Engineer%20%7C%20IoT%20Tinkerer%20%7C%20Android%20Dev&descAlignY=55&descSize=18" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1000&color=E94560&center=true&vCenter=true&width=600&lines=Industrial+Engineering+Student+%F0%9F%8F%AD;IoT+%26+Embedded+Systems+Tinkerer+%F0%9F%94%A7;Android+Developer+(Kotlin+%2B+Compose)+%F0%9F%93%B1;Fursuiter+%26+Railfan+%F0%9F%A6%8A%F0%9F%9A%86;Building+Aniflow+%26+Smart-Incubator+%E2%9A%99%EF%B8%8F" alt="Typing SVG" />
+
+<img src="https://komarev.com/ghpvc/?username=LawlessDragon&color=e94560&style=flat&label=Profile+Views" />
+<img src="https://img.shields.io/github/followers/LawlessDragon?label=Followers&style=flat&color=e94560" />
+
+</div>
+
+## About Me
+
+- 🏭 6th-semester **Industrial Engineering** student at Universitas Esa Unggul
+- ⚙️ Ex **Production & Maintenance Technician** at LG Electronics Indonesia
+- 📜 Holder of 2 registered IP works (HKI - DJKI)
+- 🔧 Tinkering with **IoT / embedded systems** — ESP32, sensors, fail-safe mechanisms
+- 📱 Building Android apps with **Kotlin + Jetpack Compose**
+- 🦊 Fursuiter, railfan (KAI Daop 1 Jakarta / Railfurs community), and photographer
+- 🐉 Kemono OC: **Mofuuryn** (もふうりん)
+
+## What I'm Building
+
+| Project | Description |
+|---|---|
+| 🎬 **Aniflow** | Android anime streaming app (Kotlin, Jetpack Compose, Media3/ExoPlayer) |
+| 🌡️ **Smart-Incubator** | IoT incubator with energy management & fail-safe mechanism (ESP32, DHT22, Firebase) |
+| 🚂 **Railfurs Website** | Community site for Indonesian railfan/furry community |
+
+## Tech Stack
+
+<div align="center">
+
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+## GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=LawlessDragon&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="49%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=LawlessDragon&theme=tokyonight&hide_border=true" width="49%" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LawlessDragon&layout=compact&theme=tokyonight&hide_border=true" width="49%" />
+
+</div>
+
+## Connect
+
+<div align="center">
+
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lawless_derg)
+[![Website](https://img.shields.io/badge/Railfurs-1a1a2e?style=for-the-badge&logo=googlechrome&logoColor=white)](https://railfurs.my.id)
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:e94560&height=100&section=footer" width="100%"/>
