@@ -4,9 +4,12 @@
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1000&color=00B8FF&center=true&vCenter=true&width=600&lines=Industrial+Engineering+Student;IoT+%26+Embedded+Systems+Tinkerer;Android+Developer+(Kotlin+%2B+Compose);Furry+Dragon+%26+Railfan;Building+Aniflow+%26+Smart-Incubator" alt="Typing SVG" />
 
-<img src="https://img.shields.io/badge/Fursona-Blue%20Dragon-00B8FF?style=for-the-badge" />
 <img src="https://komarev.com/ghpvc/?username=LawlessDragon&color=00B8FF&style=for-the-badge&label=Views" />
 <img src="https://img.shields.io/github/followers/LawlessDragon?label=Followers&style=for-the-badge&color=00B8FF" />
+
+<br/><br/>
+
+<img src="./assets/card.svg" width="600" alt="profile card" />
 
 </div>
 
@@ -15,12 +18,13 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/Role-Industrial%20Engineering%20Student-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Ex%20Job-LG%20Electronics%20Indonesia-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/IP-2%20HKI%20Registered-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Tinkering-ESP32%20%2F%20IoT-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Building-Kotlin%20%2B%20Compose-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Identity-Blue%20Dragon%20Furry-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Also-Railfan%20%2F%20Photographer-00B8FF?style=for-the-badge)
+![](https://img.shields.io/badge/Ex%20Job-LG%20Electronics%20Indonesia-7C3AED?style=for-the-badge)
+![](https://img.shields.io/badge/IP-2%20HKI%20Registered-06B6D4?style=for-the-badge)
+![](https://img.shields.io/badge/Tinkering-ESP32%20%2F%20IoT-A78BFA?style=for-the-badge)
+![](https://img.shields.io/badge/Building-Kotlin%20%2B%20Compose-0EA5E9?style=for-the-badge)
+![](https://img.shields.io/badge/Identity-Blue%20Dragon%20Furry-2DD4BF?style=for-the-badge)
+![](https://img.shields.io/badge/Also-Railfan%20%2F%20Photographer-3A86FF?style=for-the-badge)
+![](https://img.shields.io/badge/Now%20Vibing-Lo--fi%20Beats%20While%20Coding-8B5CF6?style=for-the-badge)
 
 </div>
 
@@ -29,8 +33,8 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/Aniflow-Android%20Anime%20App-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Smart--Incubator-IoT%20Fail--Safe%20System-00B8FF?style=for-the-badge)
-![](https://img.shields.io/badge/Railfurs-Community%20Website-00B8FF?style=for-the-badge)
+![](https://img.shields.io/badge/Smart--Incubator-IoT%20Fail--Safe%20System-7C3AED?style=for-the-badge)
+![](https://img.shields.io/badge/Railfurs-Community%20Website-06B6D4?style=for-the-badge)
 
 </div>
 
@@ -58,6 +62,22 @@
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=LawlessDragon&theme=tokyonight&hide_border=true" width="49%" />
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LawlessDragon&layout=compact&theme=tokyonight&hide_border=true" width="49%" />
+
+</div>
+
+## Trophies
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=LawlessDragon&theme=algolia&no-frame=true&row=1&column=6" />
+
+</div>
+
+## Contribution Snake
+
+<div align="center">
+
+<img src="./assets/snake.svg" width="100%" alt="contribution snake animation" />
 
 </div>
 
