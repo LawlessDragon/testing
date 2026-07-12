@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:e94560&height=200&section=header&text=Hi%20There,%20I'm%20Lawless%20👋&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Industrial%20Engineer%20%7C%20IoT%20Tinkerer%20%7C%20Android%20Dev&descAlignY=55&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:e94560&height=200&section=header&text=Hi%20There,%20I'm%20Lawless&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Industrial%20Engineer%20%7C%20IoT%20Tinkerer%20%7C%20Android%20Dev&descAlignY=55&descSize=18" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1000&color=E94560&center=true&vCenter=true&width=600&lines=Industrial+Engineering+Student+%F0%9F%8F%AD;IoT+%26+Embedded+Systems+Tinkerer+%F0%9F%94%A7;Android+Developer+(Kotlin+%2B+Compose)+%F0%9F%93%B1;Fursuiter+%26+Railfan+%F0%9F%A6%8A%F0%9F%9A%86;Building+Aniflow+%26+Smart-Incubator+%E2%9A%99%EF%B8%8F" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1000&color=E94560&center=true&vCenter=true&width=600&lines=Industrial+Engineering+Student;IoT+%26+Embedded+Systems+Tinkerer;Android+Developer+(Kotlin+%2B+Compose);Fursuiter+%26+Railfan;Building+Aniflow+%26+Smart-Incubator" alt="Typing SVG" />
 
 <img src="https://komarev.com/ghpvc/?username=LawlessDragon&color=e94560&style=flat&label=Profile+Views" />
 <img src="https://img.shields.io/github/followers/LawlessDragon?label=Followers&style=flat&color=e94560" />
@@ -11,21 +11,25 @@
 
 ## About Me
 
-- 🏭 6th-semester **Industrial Engineering** student at Universitas Esa Unggul
-- ⚙️ Ex **Production & Maintenance Technician** at LG Electronics Indonesia
-- 📜 Holder of 2 registered IP works (HKI - DJKI)
-- 🔧 Tinkering with **IoT / embedded systems** — ESP32, sensors, fail-safe mechanisms
-- 📱 Building Android apps with **Kotlin + Jetpack Compose**
-- 🦊 Fursuiter, railfan (KAI Daop 1 Jakarta / Railfurs community), and photographer
-- 🐉 Kemono OC: **Mofuuryn** (もふうりん)
+- 6th-semester **Industrial Engineering** student at Universitas Esa Unggul
+- Ex **Production & Maintenance Technician** at LG Electronics Indonesia
+- Holder of 2 registered IP works (HKI - DJKI)
+- Tinkering with **IoT / embedded systems** -- ESP32, sensors, fail-safe mechanisms
+- Building Android apps with **Kotlin + Jetpack Compose**
+- Fursuiter, railfan (KAI Daop 1 Jakarta / Railfurs community), and photographer
+- Kemono OC: **Mofuuryn** (もふうりん)
+
+<div align="center">
+<img src="./assets/character.gif" width="300" alt="animated character" />
+</div>
 
 ## What I'm Building
 
 | Project | Description |
 |---|---|
-| 🎬 **Aniflow** | Android anime streaming app (Kotlin, Jetpack Compose, Media3/ExoPlayer) |
-| 🌡️ **Smart-Incubator** | IoT incubator with energy management & fail-safe mechanism (ESP32, DHT22, Firebase) |
-| 🚂 **Railfurs Website** | Community site for Indonesian railfan/furry community |
+| **Aniflow** | Android anime streaming app (Kotlin, Jetpack Compose, Media3/ExoPlayer) |
+| **Smart-Incubator** | IoT incubator with energy management & fail-safe mechanism (ESP32, DHT22, Firebase) |
+| **Railfurs Website** | Community site for Indonesian railfan/furry community |
 
 ## Tech Stack
 
