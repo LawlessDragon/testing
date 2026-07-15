@@ -1,9 +1,8 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1000&color=00B8FF&center=true&vCenter=true&width=600&lines=Industrial+Engineering+Student;IoT+%26+Embedded+Systems+Tinkerer;Android+Developer+(Kotlin+%2B+Compose);Furry+Dragon+%26+Railfan;Building+Aniflow+%26+Smart-Incubator" alt="Typing SVG" />
-
-<br/><br/>
-
-<img src="./assets/card.svg" width="700" alt="profile card" />
+<img src="assets/namecard.svg" alt="LawlessDragon" width="900" />
+<br/>
+<a href="https://github.com/LawlessDragon"><img src="https://img.shields.io/badge/GitHub-LawlessDragon-00B8FF?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://twitter.com/BlueLawless"><img src="https://img.shields.io/badge/Twitter-BlueLawless-00B8FF?style=flat-square&logo=x&logoColor=white" /></a>
+<a href="https://instagram.com/lawless_derg"><img src="https://img.shields.io/badge/Instagram-lawless__derg-00B8FF?style=flat-square&logo=instagram&logoColor=white" /></a>
 
 </div>
