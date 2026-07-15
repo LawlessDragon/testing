@@ -100,7 +100,7 @@
 
   <!-- Banner area -->
   <g clip-path="url(#bannerClip)">
-    <image href="assets/banner.gif" x="10" y="10" width="780" height="140" preserveAspectRatio="xMidYMid slice"/>
+    <image href="https://raw.githubusercontent.com/LawlessDragon/testing/main/assets/banner.gif" x="10" y="10" width="780" height="140" preserveAspectRatio="xMidYMid slice"/>
     <!-- Subtle overlay on banner -->
     <rect x="10" y="10" width="780" height="140" fill="#000" opacity="0.15">
       <animate attributeName="opacity" values="0.15;0.25;0.15" dur="4s" repeatCount="indefinite"/>
@@ -121,8 +121,8 @@
     <animate attributeName="r" values="57;58;57" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Avatar image - Updated with photo URL -->
-  <image href="https://i.ibb.co/YT0JZW6Z/IMG-20241129-154137.jpg" x="55" y="135" width="110" height="110" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
+  <!-- Avatar image - Using local Char.png from assets -->
+  <image href="https://raw.githubusercontent.com/LawlessDragon/testing/main/assets/Char.png" x="55" y="135" width="110" height="110" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
 
   <!-- Avatar status indicator dot -->
   <circle cx="155" cy="235" r="10" fill="#0d0d1a" stroke="#2a2a4a" stroke-width="2"/>
