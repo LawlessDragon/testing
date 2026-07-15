@@ -1,273 +1,234 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
   <defs>
-    <!-- Gradients -->
+    <!-- Background gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e27"/>
-      <stop offset="100%" stop-color="#1a1d3a"/>
+      <stop offset="0%" stop-color="#0d0d1a">
+        <animate attributeName="stop-color" values="#0d0d1a;#1a0d2e;#0d0d1a" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#1a0d2e">
+        <animate attributeName="stop-color" values="#1a0d2e;#0d1a2e;#1a0d2e" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0d1a2e">
+        <animate attributeName="stop-color" values="#0d1a2e;#0d0d1a;#0d1a2e" dur="8s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    
-    <radialGradient id="avatarGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00f5ff"/>
-      <stop offset="100%" stop-color="#00a8cc"/>
-    </radialGradient>
-    
-    <filter id="blur">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
-    </filter>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+
+    <!-- Card border glow -->
+    <filter id="cardGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.8"/>
+
+    <!-- Avatar glow filter -->
+    <filter id="avatarGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur">
+        <animate attributeName="stdDeviation" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    
+
+    <!-- Text glow -->
+    <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur">
+        <animate attributeName="stdDeviation" values="1.5;2.5;1.5" dur="4s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Particle gradient -->
+    <radialGradient id="particleGrad">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Avatar clip path -->
     <clipPath id="avatarClip">
-      <circle cx="150" cy="200" r="85"/>
+      <circle cx="110" cy="190" r="55"/>
     </clipPath>
-    
-    <clipPath id="profileClip">
-      <circle cx="600" cy="120" r="70"/>
+
+    <!-- Banner mask for rounded top corners -->
+    <clipPath id="bannerClip">
+      <rect x="10" y="10" width="780" height="140" rx="12" ry="12"/>
     </clipPath>
-    
-    <!-- Animations -->
-    <style>
-      @keyframes rotate-ring {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-      @keyframes pulse-avatar {
-        0%, 100% { 
-          r: 85;
-          opacity: 1;
-        }
-        50% { 
-          r: 90;
-          opacity: 0.7;
-        }
-      }
-      
-      @keyframes glow-border {
-        0%, 100% { 
-          stroke-width: 3;
-          opacity: 0.8;
-        }
-        50% { 
-          stroke-width: 4;
-          opacity: 1;
-        }
-      }
-      
-      @keyframes shimmer {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.8; }
-      }
-      
-      @keyframes slide-right {
-        0% {
-          opacity: 0;
-          transform: translateX(-30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      
-      @keyframes float-up {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-      
-      @keyframes rotate-profile {
-        0%, 100% { transform: rotate(0deg) scale(1); }
-        50% { transform: rotate(2deg) scale(1.02); }
-      }
-      
-      @keyframes line-expand {
-        0% { 
-          stroke-dasharray: 0, 300;
-          opacity: 0;
-        }
-        100% { 
-          stroke-dasharray: 300, 300;
-          opacity: 1;
-        }
-      }
-      
-      @keyframes text-glow {
-        0%, 100% { filter: drop-shadow(0 0 10px rgba(0,245,255,0.3)); }
-        50% { filter: drop-shadow(0 0 20px rgba(0,245,255,0.6)); }
-      }
-      
-      #ring-outer {
-        animation: rotate-ring 8s linear infinite;
-        transform-origin: 150px 200px;
-      }
-      
-      #avatar-circle {
-        animation: pulse-avatar 3s ease-in-out infinite;
-      }
-      
-      #avatar-border {
-        animation: glow-border 2.5s ease-in-out infinite;
-      }
-      
-      #profile-circle {
-        animation: rotate-profile 4s ease-in-out infinite;
-      }
-      
-      #profile-border {
-        animation: glow-border 2s ease-in-out infinite;
-      }
-      
-      #username {
-        animation: slide-right 0.8s ease-out, text-glow 3s ease-in-out infinite 0.8s;
-      }
-      
-      #tagline {
-        animation: slide-right 1s ease-out 0.2s backwards, float-up 3s ease-in-out infinite 0.8s;
-      }
-      
-      #underline {
-        animation: line-expand 1.2s ease-out 0.4s backwards;
-        stroke-dasharray: 300;
-      }
-      
-      #social-line {
-        animation: shimmer 2.5s ease-in-out infinite 0.6s;
-      }
-      
-      .social-icon {
-        animation: float-up 3s ease-in-out infinite;
-      }
-      
-      .social-icon:nth-child(2) { animation-delay: 0s; }
-      .social-icon:nth-child(3) { animation-delay: 0.2s; }
-      .social-icon:nth-child(4) { animation-delay: 0.4s; }
-    </style>
   </defs>
-  
-  <!-- Background -->
-  <rect width="1000" height="400" fill="url(#bgGrad)"/>
-  
-  <!-- Animated Background Grid -->
-  <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,245,255,0.05)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="1000" height="400" fill="url(#grid)"/>
-  
-  <!-- LEFT SECTION: Big Avatar -->
-  <!-- Rotating Ring Background -->
-  <g id="ring-outer">
-    <defs>
-      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#00f5ff"/>
-        <stop offset="50%" stop-color="#ff00ff"/>
-        <stop offset="100%" stop-color="#00f5ff"/>
-      </linearGradient>
-    </defs>
-    <circle cx="150" cy="200" r="100" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.4"/>
-    <circle cx="150" cy="200" r="95" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.2"/>
+
+  <!-- Main card background with rounded corners -->
+  <rect x="5" y="5" width="790" height="290" rx="16" ry="16" fill="url(#bgGrad)" stroke="#2a2a4a" stroke-width="2" filter="url(#cardGlow)"/>
+
+  <!-- Floating particles in background -->
+  <g opacity="0.6">
+    <circle cx="200" cy="80" r="2" fill="url(#particleGrad)">
+      <animate attributeName="cy" values="80;50;80" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="120" r="1.5" fill="#ff00a0">
+      <animate attributeName="cy" values="120;90;120" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="350;380;350" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="60" r="2.5" fill="#00f0ff">
+      <animate attributeName="cy" values="60;30;60" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="100" r="1.8" fill="#ff00a0">
+      <animate attributeName="cy" values="100;70;100" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="650;620;650" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="40" r="1.2" fill="#00f0ff">
+      <animate attributeName="cy" values="40;20;40" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="130" r="2" fill="#ff00a0">
+      <animate attributeName="cy" values="130;100;130" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="110" r="1.5" fill="#00f0ff">
+      <animate attributeName="cy" values="110;80;110" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="150;180;150" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="580" cy="50" r="1" fill="#ff00a0">
+      <animate attributeName="cy" values="50;25;50" dur="9s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  
-  <!-- Avatar Outer Circle (pulsing) -->
-  <circle id="avatar-circle" cx="150" cy="200" r="85" fill="none" stroke="#00f5ff" stroke-width="3" 
-          filter="url(#glow)" opacity="0.6"/>
-  
-  <!-- Avatar Border (glowing) -->
-  <circle id="avatar-border" cx="150" cy="200" r="82" fill="none" stroke="#00f5ff" stroke-width="2" 
-          filter="url(#glow)"/>
-  
-  <!-- Avatar Background -->
-  <circle cx="150" cy="200" r="80" fill="rgba(10,14,39,0.8)"/>
-  
-  <!-- Avatar Image -->
-  <image href="https://raw.githubusercontent.com/LawlessDragon/testing/refs/heads/main/assets/Char.png" 
-         x="70" y="120" width="160" height="160" 
-         clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
-  
-  <!-- Avatar Shine Overlay -->
-  <circle cx="150" cy="200" r="80" fill="rgba(255,255,255,0.05)"/>
-  
-  <!-- RIGHT SECTION: Profile Info -->
-  <!-- Top: Profile Circle -->
-  <circle id="profile-circle" cx="600" cy="120" r="70" fill="rgba(0,245,255,0.1)" 
-          clip-path="url(#profileClip)"/>
-  
-  <circle id="profile-border" cx="600" cy="120" r="70" fill="none" stroke="#00f5ff" 
-          stroke-width="3" filter="url(#glow)"/>
-  
-  <image href="https://raw.githubusercontent.com/LawlessDragon/testing/refs/heads/main/assets/Char.png" 
-         x="530" y="50" width="140" height="140" 
-         clip-path="url(#profileClip)" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
-  
-  <!-- Name Section -->
-  <text id="username" x="700" y="90" font-family="'Arial', 'Helvetica', sans-serif" 
-        font-size="56" font-weight="900" fill="#ffffff" letter-spacing="2">
-    LAWLESSDRAGON
+
+  <!-- Banner area -->
+  <g clip-path="url(#bannerClip)">
+    <image href="assets/banner.gif" x="10" y="10" width="780" height="140" preserveAspectRatio="xMidYMid slice"/>
+    <!-- Subtle overlay on banner -->
+    <rect x="10" y="10" width="780" height="140" fill="#000" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Banner bottom fade -->
+  <rect x="10" y="130" width="780" height="20" fill="url(#bgGrad)" opacity="0.9"/>
+
+  <!-- Avatar frame outer glow ring -->
+  <circle cx="110" cy="190" r="60" fill="none" stroke="#00f0ff" stroke-width="3" opacity="0.8" filter="url(#avatarGlow)">
+    <animate attributeName="stroke-width" values="3;5;3" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Avatar frame inner ring -->
+  <circle cx="110" cy="190" r="57" fill="none" stroke="#ff00a0" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="r" values="57;58;57" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Avatar image -->
+  <image href="assets/Char.png" x="55" y="135" width="110" height="110" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- Avatar status indicator dot -->
+  <circle cx="155" cy="235" r="10" fill="#0d0d1a" stroke="#2a2a4a" stroke-width="2"/>
+  <circle cx="155" cy="235" r="6" fill="#00f0ff">
+    <animate attributeName="fill" values="#00f0ff;#00ff88;#00f0ff" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Username -->
+  <text x="190" y="175" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" filter="url(#textGlow)">
+    LawlessDragon
+    <animate attributeName="fill" values="#ffffff;#e0e0ff;#ffffff" dur="6s" repeatCount="indefinite"/>
   </text>
-  
-  <text id="tagline" x="700" y="140" font-family="'Arial', 'Helvetica', sans-serif" 
-        font-size="18" fill="#00f5ff" font-weight="300" letter-spacing="1">
-    Creator • Developer • Digital Artist
-  </text>
-  
-  <!-- Decorative Line Under Name -->
-  <line id="underline" x1="700" y1="155" x2="950" y2="155" stroke="#ff00ff" stroke-width="3" 
-        stroke-linecap="round" filter="url(#glow)"/>
-  
-  <!-- BOTTOM SECTION: Social Links -->
-  <line id="social-line" x1="300" y1="260" x2="900" y2="260" stroke="#00f5ff" stroke-width="2" 
-        opacity="0.5" stroke-dasharray="5,5"/>
-  
-  <!-- Social Icons & Text -->
-  <g class="social-icon">
-    <a href="https://github.com/LawlessDragon" target="_blank">
-      <circle cx="330" cy="310" r="25" fill="none" stroke="#00f5ff" stroke-width="2" filter="url(#glow)"/>
-      <text x="330" y="318" font-family="Arial" font-size="24" fill="#00f5ff" text-anchor="middle" 
-            font-weight="bold">GH</text>
-      <text x="380" y="318" font-family="Arial" font-size="14" fill="#e0e0e0">GitHub</text>
-    </a>
+
+  <!-- Verified badge -->
+  <g transform="translate(390, 155)">
+    <circle cx="0" cy="0" r="10" fill="#5865F2">
+      <animate attributeName="fill" values="#5865F2;#7289da;#5865F2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M-4 0 L-1 3 L4 -3" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  
-  <g class="social-icon">
-    <a href="https://twitter.com/BlueLawless" target="_blank">
-      <circle cx="520" cy="310" r="25" fill="none" stroke="#ff00ff" stroke-width="2" filter="url(#glow)"/>
-      <text x="520" y="318" font-family="Arial" font-size="24" fill="#ff00ff" text-anchor="middle" 
-            font-weight="bold">𝕏</text>
-      <text x="570" y="318" font-family="Arial" font-size="14" fill="#e0e0e0">Twitter</text>
-    </a>
+
+  <!-- Nitro badge -->
+  <g transform="translate(415, 155)">
+    <rect x="-10" y="-8" width="20" height="16" rx="3" fill="#ff73fa">
+      <animate attributeName="fill" values="#ff73fa;#ff00a0;#ff73fa" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="3" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">N</text>
   </g>
-  
-  <g class="social-icon">
-    <a href="https://instagram.com/lawless_derg" target="_blank">
-      <circle cx="710" cy="310" r="25" fill="none" stroke="#ff6b9d" stroke-width="2" filter="url(#glow)"/>
-      <text x="710" y="318" font-family="Arial" font-size="24" fill="#ff6b9d" text-anchor="middle" 
-            font-weight="bold">📷</text>
-      <text x="760" y="318" font-family="Arial" font-size="14" fill="#e0e0e0">Instagram</text>
-    </a>
+
+  <!-- Divider line -->
+  <line x1="190" y1="185" x2="750" y2="185" stroke="#2a2a4a" stroke-width="1">
+    <animate attributeName="stroke" values="#2a2a4a;#3a3a6a;#2a2a4a" dur="5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Social links with icons -->
+  <g transform="translate(190, 205)">
+    <!-- GitHub icon -->
+    <g transform="translate(0, 0)">
+      <circle cx="10" cy="10" r="10" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1">
+        <animate attributeName="stroke-opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M10 3 C6 3 3 6 3 10 C3 13 5 15 7 16 C7 16 7 15 7 15 C5 14 5 12 5 12 C5 12 5 12 5 11 C5 11 6 11 6 11 C7 11 7 12 7 12 C8 12 8 11 9 11 C6 11 5 9 5 7 C5 6 6 5 6 4 C6 4 6 3 7 2 C7 2 8 3 10 3 C12 3 13 2 13 2 C14 3 14 4 14 4 C14 5 15 6 15 7 C15 9 14 11 11 11 C12 11 12 12 12 13 L12 15 C12 15 12 16 13 16 C15 15 17 13 17 10 C17 6 14 3 10 3 Z" 
+            fill="#00f0ff" transform="translate(2,2) scale(0.6)"/>
+    </g>
+    <text x="28" y="14" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#b0b0d0">
+      GitHub: /LawlessDragon
+    </text>
   </g>
-  
-  <!-- Additional Decorative Elements -->
-  <circle cx="920" cy="350" r="3" fill="#00f5ff" opacity="0.6"/>
-  <circle cx="90" cy="350" r="3" fill="#ff00ff" opacity="0.6"/>
-  
-  <!-- Corner Accents -->
-  <line x1="50" y1="380" x2="90" y2="380" stroke="#00f5ff" stroke-width="2" opacity="0.5"/>
-  <line x1="50" y1="380" x2="50" y2="340" stroke="#00f5ff" stroke-width="2" opacity="0.5"/>
-  
-  <line x1="950" y1="20" x2="950" y2="60" stroke="#ff00ff" stroke-width="2" opacity="0.5"/>
-  <line x1="910" y1="20" x2="950" y2="20" stroke="#ff00ff" stroke-width="2" opacity="0.5"/>
-  
+
+  <g transform="translate(190, 235)">
+    <!-- Twitter/X icon -->
+    <g transform="translate(0, 0)">
+      <circle cx="10" cy="10" r="10" fill="#1a1a2e" stroke="#ff00a0" stroke-width="1">
+        <animate attributeName="stroke-opacity" values="1;0.5;1" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M14 4 L15 4 L11 9 L16 15 L12 15 L9 11 L6 15 L5 15 L9 9 L4 4 L8 4 L11 8 L14 4 Z" 
+            fill="#ff00a0" transform="translate(2,2) scale(0.6)"/>
+    </g>
+    <text x="28" y="14" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#b0b0d0">
+      @BlueLawless
+    </text>
+  </g>
+
+  <g transform="translate(190, 265)">
+    <!-- Instagram icon -->
+    <g transform="translate(0, 0)">
+      <circle cx="10" cy="10" r="10" fill="#1a1a2e" stroke="#ff00a0" stroke-width="1">
+        <animate attributeName="stroke-opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="5" y="5" width="10" height="10" rx="3" ry="3" fill="none" stroke="#ff00a0" stroke-width="1.2" transform="translate(2,2) scale(0.6)"/>
+      <circle cx="10" cy="10" r="2.5" fill="none" stroke="#ff00a0" stroke-width="1.2" transform="translate(2,2) scale(0.6)"/>
+      <circle cx="13" cy="7" r="0.8" fill="#ff00a0" transform="translate(2,2) scale(0.6)"/>
+    </g>
+    <text x="28" y="14" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#b0b0d0">
+      @lawless_derg
+    </text>
+  </g>
+
+  <!-- About Me section on the right -->
+  <g transform="translate(520, 205)">
+    <text x="0" y="0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#ff00a0" letter-spacing="1">
+      ABOUT ME
+      <animate attributeName="fill" values="#ff00a0;#ff73fa;#ff00a0" dur="4s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="18" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#a0a0c0">
+      Code-slayer. Dragon-tamer. Creating
+    </text>
+    <text x="0" y="34" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#a0a0c0">
+      digital realms. | Dev | Designer |
+    </text>
+    <text x="0" y="50" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#a0a0c0">
+      @BlueLawless | Living the lawless life!
+    </text>
+  </g>
+
+  <!-- Decorative corner accents -->
+  <path d="M 15 15 L 35 15 L 35 20 L 20 20 L 20 35 L 15 35 Z" fill="#00f0ff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 785 15 L 765 15 L 765 20 L 780 20 L 780 35 L 785 35 Z" fill="#ff00a0" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 15 285 L 35 285 L 35 280 L 20 280 L 20 265 L 15 265 Z" fill="#ff00a0" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 785 285 L 765 285 L 765 280 L 780 280 L 780 265 L 785 265 Z" fill="#00f0ff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.2s" repeatCount="indefinite"/>
+  </path>
 </svg>
