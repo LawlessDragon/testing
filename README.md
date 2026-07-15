@@ -1,4 +1,4 @@
 <div align="center">
-<img src="assets/namecard.svg" alt="LawlessDragon" width="900" />
+<img src="assets/namecard.svg" alt="LawlessDragon" />
 <br/>
 </div>
