@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawlessDragon Profile Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a0d2e 50%, #0d1a2e 100%);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .card {
+            width: 800px;
+            height: 300px;
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a0d2e 50%, #0d1a2e 100%);
+            border: 2px solid #2a2a4a;
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Floating particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+
+        .particle-1 {
+            width: 4px;
+            height: 4px;
+            background: #00f0ff;
+            left: 200px;
+            top: 80px;
+            animation: float 6s linear infinite;
+            opacity: 0.6;
+        }
+
+        .particle-2 {
+            width: 3px;
+            height: 3px;
+            background: #ff00a0;
+            left: 350px;
+            top: 120px;
+            animation: float 5s linear infinite;
+            opacity: 0.6;
+        }
+
+        .particle-3 {
+            width: 5px;
+            height: 5px;
+            background: #00f0ff;
+            left: 500px;
+            top: 60px;
+            animation: float 7s linear infinite;
+            opacity: 0.8;
+        }
+
+        .particle-4 {
+            width: 3.6px;
+            height: 3.6px;
+            background: #ff00a0;
+            left: 650px;
+            top: 100px;
+            animation: float 4.5s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Banner area */
+        .banner {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(90deg, #1a2a4a 0%, #2a1a4a 50%, #1a2a4a 100%);
+            border-bottom: 20px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main content */
+        .content {
+            display: flex;
+            padding: 20px 30px;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Avatar section */
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+
+        .avatar-ring-outer {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #00f0ff;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), inset 0 0 20px rgba(0, 240, 255, 0.2);
+            animation: pulse-ring 3s ease-in-out infinite;
+        }
+
+        .avatar-ring-inner {
+            position: absolute;
+            width: 114px;
+            height: 114px;
+            border: 1.5px solid #ff00a0;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            animation: pulse-ring-inner 2s ease-in-out infinite;
+        }
+
+        .avatar-image {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .avatar-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .status-dot {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            background: #0d0d1a;
+            border: 2px solid #2a2a4a;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        .status-dot::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #00f0ff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: blink 5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { background: #00f0ff; }
+            50% { background: #00ff88; }
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), inset 0 0 20px rgba(0, 240, 255, 0.2);
+                border-width: 3px;
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 240, 255, 0.4), inset 0 0 20px rgba(0, 240, 255, 0.1);
+                border-width: 5px;
+            }
+        }
+
+        @keyframes pulse-ring-inner {
+            0%, 100% { width: 114px; left: 3px; }
+            50% { width: 116px; left: 2px; }
+        }
+
+        /* Username and badges */
+        .name-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .username {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            animation: glow-text 6s ease-in-out infinite;
+        }
+
+        @keyframes glow-text {
+            0%, 100% { color: #ffffff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+            50% { color: #e0e0ff; text-shadow: 0 0 20px rgba(0, 240, 255, 0.8); }
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .badge-verified {
+            background: #5865F2;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .badge-nitro {
+            background: #ff73fa;
+            border-radius: 4px;
+            width: 22px;
+            height: 18px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Social links */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: #b0b0d0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            border-radius: 50%;
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .icon-github { border-color: #00f0ff; color: #00f0ff; }
+        .icon-twitter { border-color: #ff00a0; color: #ff00a0; }
+        .icon-instagram { border-color: #ff00a0; color: #ff00a0; }
+
+        .social-link:hover {
+            color: #ffffff;
+        }
+
+        /* Divider */
+        .divider {
+            width: 2px;
+            height: 140px;
+            background: linear-gradient(180deg, transparent, #2a2a4a, transparent);
+            animation: glow-line 5s ease-in-out infinite;
+        }
+
+        @keyframes glow-line {
+            0%, 100% { background: linear-gradient(180deg, transparent, #2a2a4a, transparent); }
+            50% { background: linear-gradient(180deg, transparent, #3a3a6a, transparent); }
+        }
+
+        /* About section */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .about-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ff00a0;
+            animation: glow-title 4s ease-in-out infinite;
+            text-transform: uppercase;
+        }
+
+        @keyframes glow-title {
+            0%, 100% { color: #ff00a0; }
+            50% { color: #ff73fa; }
+        }
+
+        .about-text {
+            font-size: 11px;
+            color: #a0a0c0;
+            line-height: 1.4;
+        }
+
+        /* Corner accents */
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+
+        .corner-tl {
+            top: 10px;
+            left: 10px;
+            border-top: 2px solid #00f0ff;
+            border-left: 2px solid #00f0ff;
+            animation: blink-accent 3s ease-in-out infinite;
+        }
+
+        .corner-tr {
+            top: 10px;
+            right: 10px;
+            border-top: 2px solid #ff00a0;
+            border-right: 2px solid #ff00a0;
+            animation: blink-accent 3.5s ease-in-out infinite;
+        }
+
+        .corner-bl {
+            bottom: 10px;
+            left: 10px;
+            border-bottom: 2px solid #ff00a0;
+            border-left: 2px solid #ff00a0;
+            animation: blink-accent 4s ease-in-out infinite;
+        }
+
+        .corner-br {
+            bottom: 10px;
+            right: 10px;
+            border-bottom: 2px solid #00f0ff;
+            border-right: 2px solid #00f0ff;
+            animation: blink-accent 3.2s ease-in-out infinite;
+        }
+
+        @keyframes blink-accent {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div>
+
+        <div class="banner"></div>
+
+        <div class="content">
+            <!-- Avatar Section -->
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <div class="avatar-ring-outer"></div>
+                    <div class="avatar-ring-inner"></div>
+                    <div class="avatar-image">
+                        <img src="https://raw.githubusercontent.com/LawlessDragon/testing/main/assets/Char.png" alt="LawlessDragon">
+                    </div>
+                    <div class="status-dot"></div>
+                </div>
+
+                <div class="name-section">
+                    <span class="username">LawlessDragon</span>
+                    <div class="badge badge-verified">✓</div>
+                    <div class="badge badge-nitro">N</div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/LawlessDragon" class="social-link">
+                        <span class="social-icon icon-github">G</span>
+                        <span>GitHub: /LawlessDragon</span>
+                    </a>
+                    <a href="https://twitter.com/BlueLawless" class="social-link">
+                        <span class="social-icon icon-twitter">𝕏</span>
+                        <span>@BlueLawless</span>
+                    </a>
+                    <a href="https://instagram.com/lawless_derg" class="social-link">
+                        <span class="social-icon icon-instagram">📷</span>
+                        <span>@lawless_derg</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- About Section -->
+            <div class="about-section">
+                <div class="about-title">About Me</div>
+                <div class="about-text">
+                    Code-slayer. Dragon-tamer. Creating digital realms.
+                </div>
+                <div class="about-text">
+                    Dev | Designer | Living the lawless life! 🔥
+                </div>
+                <div class="about-text" style="margin-top: 10px; color: #00f0ff;">
+                    @BlueLawless
+                </div>
+            </div>
+        </div>
+
+        <!-- Corner accents -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+    </div>
+</body>
+</html>
